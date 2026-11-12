@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Christina 的免費學習工具箱</title>
+<meta name="description" content="英語老師 Christina 做的免費線上學習工具：英文拼讀、各課單字字表、國語生字筆順、台語聽力、數學遊戲、影片推薦。手機電腦都能用。" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Sans:wght@400;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --c-primary:#887ea6; --c-primary-deep:#5f5582; --c-primary-soft:#efecf6; --c-primary-tint:#f6f4fa;
+    --c-text:#1f2937; --c-muted:#64748b; --c-bg:#f3f1f7; --c-border:#e6e2ee;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;overflow-x:hidden}
+  body{font-family:"Noto Sans TC","Noto Sans",system-ui,sans-serif;background:var(--c-bg);color:var(--c-text);line-height:1.6;font-size:16px;padding:1.2rem 0 2rem}
+  .container{max-width:960px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 10px 30px rgba(95,85,130,.10);overflow:hidden}
+  .inner{padding:1.5rem 1.6rem 2rem}
+
+  /* ---- 標題區 ---- */
+  .hero{position:relative;padding:2.8rem 1.6rem 2rem;text-align:center;color:#fff;
+    background:linear-gradient(135deg,#6e6392 0%,#887ea6 55%,#a79dc4 100%);overflow:hidden}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08)}
+  .hero::before{width:260px;height:260px;right:-80px;top:-120px}
+  .hero::after{width:180px;height:180px;left:-60px;bottom:-100px}
+  .hero > *{position:relative}
+  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.18em;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.2rem .9rem;margin-bottom:.9rem}
+  .hero h1{font-size:2rem;font-weight:900;line-height:1.3;margin:0 0 .4rem;letter-spacing:.02em}
+  .hero h1 small{display:block;font-size:1rem;font-weight:500;opacity:.92;margin-top:.3rem;letter-spacing:.08em}
+  .hero .lead{color:rgba(255,255,255,.9);margin:.8rem auto 0;font-size:.98rem;max-width:34em}
+  .hero .support-btn{margin-top:1.2rem}
+
+  /* ---- 分類快速跳轉 ---- */
+  .jump{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin:0 0 1.6rem}
+  .jump a{border:2px solid var(--c-border);background:#fff;border-radius:999px;padding:.35rem 1rem;font-weight:700;font-size:.92rem;color:#334155;text-decoration:none;transition:all .15s}
+  .jump a:hover{border-color:var(--c-primary);color:var(--c-primary-deep)}
+
+  /* ---- 分類與卡片 ---- */
+  .cat{margin-bottom:1.8rem;scroll-margin-top:1rem}
+  .cat h2{display:flex;align-items:center;gap:.6rem;font-size:1.05rem;font-weight:900;color:var(--c-primary-deep);margin:0 0 .8rem;letter-spacing:.06em}
+  .cat h2::after{content:"";flex:1;height:1px;background:var(--c-border)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.9rem}
+  .card{display:flex;gap:.8rem;align-items:flex-start;border:1.5px solid var(--c-border);border-radius:14px;padding:.9rem 1rem;background:#fff;text-decoration:none;color:inherit;transition:border-color .15s,transform .1s,box-shadow .15s}
+  .card:hover{border-color:var(--c-primary);box-shadow:0 8px 18px rgba(136,126,166,.18);transform:translateY(-2px)}
+  .card .ic{flex:0 0 auto;display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:12px;background:var(--c-primary-soft);font-size:1.4rem}
+  .card .t{font-weight:900;font-size:1.02rem;color:#0f172a;line-height:1.35}
+  .card .t small{display:block;font-family:"Noto Sans",sans-serif;font-size:.78rem;font-weight:700;color:var(--c-muted);margin-top:.1rem}
+  .card .d{font-size:.86rem;color:#475569;margin-top:.3rem;line-height:1.5}
+  .card .alt{display:inline-block;margin-top:.35rem;font-size:.78rem;font-weight:700;color:var(--c-primary-deep);background:var(--c-primary-soft);border-radius:999px;padding:.05rem .6rem}
+
+  /* ---- footer：與其他工具相同結構 ---- */
+  footer.credits{margin-top:1rem;padding-top:1.2rem;border-top:2px solid var(--c-border);text-align:center;font-size:.875rem;color:#475569;line-height:1.6}
+  .credits .contact a{color:#64748b;margin:0 .5rem;text-decoration:none;transition:color .2s}
+  .credits .contact a:hover{color:var(--c-primary-deep)}
+  .support-cta{margin:1rem 0}
+  .support-btn{display:inline-block;background:linear-gradient(to right,#facc15,#fb923c);color:#fff;font-weight:600;font-size:1rem;padding:.5rem 1.25rem;border-radius:9999px;box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);text-decoration:none;transition:transform .2s ease}
+  .support-btn:hover{transform:scale(1.05)}
+  .support-btn:focus{outline:3px solid rgba(251,191,36,.45);outline-offset:2px}
+  .note{margin:0 0 1.6rem;padding:.8rem 1.1rem;background:var(--c-primary-tint);border-radius:12px;font-size:.88rem;color:#475569;border:1px solid var(--c-border)}
+
+  @media (max-width:640px){
+    body{padding:0}
+    .container{border-radius:0;box-shadow:none}
+    .inner{padding:1.2rem 16px 2rem}
+    .hero{padding:2.4rem 16px 1.6rem}
+    .hero h1{font-size:1.6rem}
+    .cards{grid-template-columns:1fr}
+    .support-btn{font-size:.9rem;font-weight:500;padding:.45rem 1rem}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="hero">
+    <span class="eyebrow">FREE · 免費使用</span>
+    <h1>Christina 的免費學習工具箱<small>英語 · 國語 · 台語 · 數學 · 親子生活</small></h1>
+    <p class="lead">英文老師兼兩寶媽做的小工具，手機、電腦打開就能用，不用註冊、不用下載。</p>
+    <a href="https://portaly.cc/mamahowma/support" target="_blank" rel="noopener noreferrer" class="support-btn">覺得好用嗎？☕ 請杯咖啡鼓勵我</a>
+  </header>
+
+  <div class="inner">
+    <nav class="jump" id="jump"></nav>
+    <div id="cats"></div>
+
+    <div class="note">💡 有建議或發現問題，歡迎寫信或到粉專留言告訴我。</div>
+
+    <footer class="credits">
+      <div class="contact">
+        <a href="mailto:mamahowma@gmail.com" aria-label="Email mamahowma"><i class="fa-solid fa-envelope fa-xl fa-fw" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/mamahowma" target="_blank" rel="noopener noreferrer" aria-label="mamahowma Facebook Page"><i class="fa-brands fa-facebook fa-xl fa-fw" aria-hidden="true"></i></a>
+        <a href="https://portaly.cc/mamahowma/support" target="_blank" rel="noopener noreferrer" aria-label="Support mamahowma"><i class="fa-solid fa-mug-hot fa-xl fa-fw" aria-hidden="true"></i></a>
+      </div>
+      <div class="support-cta">
+        <a href="https://portaly.cc/mamahowma/support" target="_blank" rel="noopener noreferrer" class="support-btn">喜歡這些免費工具嗎？☕ 請杯咖啡鼓勵我</a>
+      </div>
+      © 2026 Christina Yu. All rights reserved.
+    </footer>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   新增工具：在對應分類的 items 加一個物件即可。
+   ic   ：卡片左邊的 emoji
+   t    ：中文名稱
+   en   ：英文名稱（可省略）
+   d    ：一句話說明
+   url  ：網址
+   alt  ：第二個連結（可省略），例：{ t:"English version", url:"..." }
+   ============================================================ */
+const CATS = [
+  { id:"english", name:"🔡 英語", items:[
+    { ic:"🔍", t:"英文拼字 × 聲音對照", en:"Word Mapper", d:"查單字，看每個字母對到哪個聲音，有美式發音音檔與音標。", url:"https://jinshuanyu.github.io/word-mapper/" },
+    { ic:"📚", t:"國中小各課單字有聲字表", en:"Lesson Words", d:"國小三家版本、國中各課的單字，一鍵開成有聲字表，可印 PDF、可分享。", url:"https://jinshuanyu.github.io/lesson-words/" },
+    { ic:"✏️", t:"英文拼讀測驗", en:"Phonics Quiz", d:"聽聲音選拼法，練 phonics 的互動測驗。", url:"https://jinshuanyu.github.io/phonics-quiz/" },
+    { ic:"📋", t:"Dolch 高頻詞拼讀表", en:"Dolch List", d:"220 個高頻詞依拼讀規則分類，點了就能聽。", url:"https://jinshuanyu.github.io/Dolch-List-by-spelling-patterns/" },
+    { ic:"🕵️", t:"母音偵探", en:"Vowel Detective", d:"聽單字、找出母音，練英文母音聽辨。", url:"https://jinshuanyu.github.io/vowel-detective/" },
+    { ic:"🎯", t:"重音偵探", en:"Stress Detective", d:"聽單字、找出重音在哪個音節。", url:"https://jinshuanyu.github.io/stress-detective/" },
+    { ic:"🗣️", t:"美式英語 IPA 音標指南", en:"IPA Guide", d:"每個音標的發音、例字與音檔，查音標用這個。", url:"https://jinshuanyu.github.io/ipa-guide/" },
+    { ic:"🔊", t:"英語分句朗讀", en:"English Reader", d:"貼上英文句子，一句一句聽發音，練朗讀。", url:"https://jinshuanyu.github.io/english-reader/" },
+    { ic:"🌱", t:"句子擴寫", en:"Grow a Sentence", d:"擲骰子加細節，把短句一步步長成長句。", url:"https://jinshuanyu.github.io/grow-a-sentence/" },
+    { ic:"🪜", t:"單字接龍", en:"Word Ladder", d:"每次只改一個字母，從起點字走到目標字。", url:"https://jinshuanyu.github.io/word-ladder/" },
+    { ic:"🔟", t:"英文數字 1–10 拼字 × 聲音", en:"One to Ten", d:"one 到 ten 的拼字聲音對照表，入門用。", url:"https://jinshuanyu.github.io/one-to-ten-word-mapper/" },
+    { ic:"📺", t:"英語教育影片推薦", en:"Playlists for Kids", d:"科普、社會、語文、幼幼，兩寶看過的 YouTube 與串流節目片單。", url:"https://jinshuanyu.github.io/englishplaylistsforkids/" },
+    { ic:"🎧", t:"英語聽力微習慣承諾卡", d:"五題找到你的起跑點，做一張每天聽英文的承諾卡。", url:"https://jinshuanyu.github.io/daily-english-listening-habit/" }
+  ]},
+  { id:"chinese", name:"📖 國語", items:[
+    { ic:"🔗", t:"生字 × 筆順 × 成語", d:"選學期、年級、版本、課別，查每課生字的筆順與成語。", url:"https://jinshuanyu.github.io/chinese-idioms-by-lesson/" },
+    { ic:"🐰", t:"跟著小兔學國字 筆順練習", d:"中文分級筆順練習入口。", url:"https://jinshuanyu.github.io/chinese-beginner-stroke-practice/" },
+    { ic:"🌸", t:"花瓣識字", d:"選注音、找部件，認識同一個部件的文字家族，可列印。", url:"https://jinshuanyu.github.io/chinese-character-blossom-finder/" },
+    { ic:"ㄅ", t:"注音小達人", d:"容易混淆的注音分關卡練習，聽發音選答案。", url:"https://jinshuanyu.github.io/bopomofo-game/" },
+    { ic:"🧮", t:"量詞配對小遊戲", d:"一隻、一條、一張……計時配對練量詞。", url:"https://jinshuanyu.github.io/chinese-quantifiers/" },
+    { ic:"📝", t:"成語學習工具", d:"自己選成語，學習、測驗、生成學習單。", url:"https://jinshuanyu.github.io/chinese-idioms/" },
+    { ic:"📚", t:"臺灣本土兒少好書推薦", d:"從各大推薦書單精選的臺灣本土創作讀物，可依年齡篩選。", url:"https://jinshuanyu.github.io/tw-local-books/" }
+  ]},
+  { id:"taigi", name:"🗣️ 台語", items:[
+    { ic:"👂", t:"台語入門聽力練習", d:"聽音選調、聽寫漢字、聽寫台羅，用教育部辭典音檔。", url:"https://jinshuanyu.github.io/taigi-listening/" },
+    { ic:"💬", t:"咱來學臺灣台語・讀語句", d:"從簡單語句開始讀台語。", url:"https://jinshuanyu.github.io/taigi-sentences/" }
+  ]},
+  { id:"math", name:"🔢 數學", items:[
+    { ic:"✖️", t:"十十乘法表 & 乘法大挑戰", d:"看乘法表、玩乘法挑戰。", url:"https://jinshuanyu.github.io/times-table/" },
+    { ic:"🎄", t:"聖誕樹乘法遊戲", d:"找倍數點亮聖誕樹。", url:"https://jinshuanyu.github.io/christmas-tree-multiples/" },
+    { ic:"🚀", t:"太空漫遊", en:"Spacewalk", d:"2–4 人擲骰子加法桌遊，先衝到 100 的贏。", url:"https://jinshuanyu.github.io/spacewalk/" },
+    { ic:"➕", t:"加法表 & 加減法練習", d:"加法表與基礎加減練習。", url:"https://jinshuanyu.github.io/add-and-subtract/" },
+    { ic:"➖", t:"退位減法練習", d:"18 以內的退位減法練習。", url:"https://jinshuanyu.github.io/subtraction-borrowing/" }
+  ]},
+  { id:"life", name:"🌍 親子生活", items:[
+    { ic:"🗺️", t:"環遊世界 地理消消樂", en:"World Travel", d:"連線消除地標，答對地理問答加步數。", url:"https://jinshuanyu.github.io/geo-crush-chinese/", alt:{ t:"English version", url:"https://jinshuanyu.github.io/geo-crush/" } },
+    { ic:"🍬", t:"多巴胺菜單", en:"Dopamine Menu", d:"為 ADHD 大腦設計，無聊或低落時打開來點一道開心的事。", url:"https://jinshuanyu.github.io/dopamine-menu/" },
+    { ic:"🍵", t:"專注計時", en:"Steep", d:"25 分鐘專注、5 分鐘休息的簡單計時器。", url:"https://jinshuanyu.github.io/steep/" },
+    { ic:"🥚", t:"蛋白質吃夠了嗎？", d:"幫全家搭配優質蛋白質餐盤，自動算採買清單。", url:"https://jinshuanyu.github.io/protein-tracker/" }
+  ]}
+];
+
+function esc(s){ const d=document.createElement("div"); d.textContent=s; return d.innerHTML; }
+document.getElementById("jump").innerHTML = CATS.map(c => `<a href="#${c.id}">${esc(c.name)}</a>`).join("");
+document.getElementById("cats").innerHTML = CATS.map(c => `
+  <section class="cat" id="${c.id}">
+    <h2>${esc(c.name)}</h2>
+    <div class="cards">${c.items.map(it => `
+      <a class="card" href="${it.url}">
+        <span class="ic">${it.ic}</span>
+        <span>
+          <span class="t">${esc(it.t)}${it.en ? `<small>${esc(it.en)}</small>` : ""}</span>
+          <span class="d">${esc(it.d)}</span>
+          ${it.alt ? `<span class="alt" data-url="${it.alt.url}">${esc(it.alt.t)} ↗</span>` : ""}
+        </span>
+      </a>`).join("")}
+    </div>
+  </section>`).join("");
+/* 卡片裡的第二個連結：點它時不要跟著開主連結 */
+document.querySelectorAll(".alt").forEach(el => el.addEventListener("click", e => {
+  e.preventDefault(); e.stopPropagation(); location.href = el.dataset.url;
+}));
+</script>
+</body>
+</html>
