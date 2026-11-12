@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Christina 的免費學習工具箱</title>
-<meta name="description" content="英語老師 Christina 做的免費線上學習工具：英文拼讀、各課單字字表、國語生字筆順、台語聽力、數學遊戲、影片推薦。手機電腦都能用。" />
+<title>媽媽好忙。媽媽好嗎？｜免費學習工具箱</title>
+<meta name="description" content="英語老師 Christina（媽媽好忙。媽媽好嗎？）做的免費線上學習工具：英文拼讀、各課單字字表、國語生字筆順、台語聽力、數學遊戲、影片推薦。手機電腦都能用。" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +28,7 @@
   .hero::before{width:260px;height:260px;right:-80px;top:-120px}
   .hero::after{width:180px;height:180px;left:-60px;bottom:-100px}
   .hero > *{position:relative}
-  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.18em;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.2rem .9rem;margin-bottom:.9rem}
+  .eyebrow{display:inline-block;font-size:.92rem;font-weight:700;letter-spacing:.12em;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.25rem 1rem;margin-bottom:.9rem}
   .hero h1{font-size:2.1rem;font-weight:900;line-height:1.3;margin:0 0 .4rem;letter-spacing:.02em}
   .hero h1 small{display:block;font-size:1rem;font-weight:500;opacity:.92;margin-top:.3rem;letter-spacing:.08em}
   .hero .lead{color:rgba(255,255,255,.9);margin:.8rem auto 0;font-size:.98rem;max-width:34em}
@@ -53,14 +53,19 @@
   .crumb{display:flex;align-items:center;gap:.6rem;font-size:1.5rem;font-weight:900;margin:0 0 1rem;color:#0f172a}
   .crumb .e{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:14px;font-size:1.5rem;color:#fff;background:linear-gradient(145deg,var(--a),var(--b))}
   .crumb small{font-size:.85rem;font-weight:700;color:var(--c-muted)}
-  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:.9rem}
-  .card{display:flex;gap:.85rem;align-items:flex-start;border:1.5px solid var(--c-border);border-left:5px solid var(--a);border-radius:14px;padding:.9rem 1rem;background:#fff;text-decoration:none;color:inherit;transition:border-color .15s,transform .1s,box-shadow .15s}
-  .card:hover{border-color:var(--a);box-shadow:0 8px 18px -6px var(--a);transform:translateY(-2px)}
-  .card .ic{flex:0 0 auto;display:grid;place-items:center;width:2.7rem;height:2.7rem;border-radius:12px;background:color-mix(in srgb,var(--a) 14%,#fff);font-size:1.45rem}
-  .card .t{font-weight:900;font-size:1.02rem;color:#0f172a;line-height:1.35}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem}
+  .card{display:flex;flex-direction:column;border:1.5px solid var(--c-border);border-radius:16px;background:#fff;text-decoration:none;color:inherit;overflow:hidden;transition:border-color .15s,transform .1s,box-shadow .15s}
+  .card:hover{border-color:var(--a);box-shadow:0 12px 24px -8px var(--a);transform:translateY(-3px)}
+  .card .shot,.card .body,.card .t,.card .d{display:block}
+  .card .shot{position:relative;aspect-ratio:16/10;background:var(--c-primary-tint);border-bottom:1px solid var(--c-border);overflow:hidden}
+  .card .shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .3s}
+  .card:hover .shot img{transform:scale(1.03)}
+  .card .shot .ic{position:absolute;left:.7rem;bottom:-.9rem;display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:12px;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.12);font-size:1.25rem;border:2px solid var(--a)}
+  .card .body{padding:1.15rem 1rem 1rem}
+  .card .t{font-weight:900;font-size:1.05rem;color:#0f172a;line-height:1.35}
   .card .t small{display:block;font-family:"Noto Sans",sans-serif;font-size:.78rem;font-weight:700;color:var(--c-muted);margin-top:.1rem}
-  .card .d{font-size:.86rem;color:#475569;margin-top:.3rem;line-height:1.5}
-  .card .alt{display:inline-block;margin-top:.35rem;font-size:.78rem;font-weight:700;color:var(--a);background:color-mix(in srgb,var(--a) 12%,#fff);border-radius:999px;padding:.05rem .6rem}
+  .card .d{font-size:.86rem;color:#475569;margin-top:.35rem;line-height:1.55}
+  .card .alt{display:inline-block;margin-top:.45rem;font-size:.78rem;font-weight:700;color:var(--a);background:color-mix(in srgb,var(--a) 12%,#fff);border-radius:999px;padding:.05rem .6rem}
   .others{margin-top:2rem}
   .others h3{font-size:.9rem;font-weight:700;color:var(--c-muted);margin:0 0 .6rem;letter-spacing:.06em}
   .others .chips{display:flex;flex-wrap:wrap;gap:.5rem}
@@ -69,6 +74,7 @@
 
   /* ---- footer：與其他工具相同結構 ---- */
   footer.credits{margin-top:1.6rem;padding-top:1.2rem;border-top:2px solid var(--c-border);text-align:center;font-size:.875rem;color:#475569;line-height:1.6}
+  .credits .brand{font-weight:900;color:var(--c-primary-deep);margin-bottom:.3rem}
   .credits .contact a{color:#64748b;margin:0 .5rem;text-decoration:none;transition:color .2s}
   .credits .contact a:hover{color:var(--c-primary-deep)}
   .support-cta{margin:1rem 0}
@@ -98,9 +104,9 @@
 <div class="container">
   <header class="hero">
     <button class="hero-back" id="heroBack" type="button" hidden>← 回首頁</button>
-    <span class="eyebrow">FREE · 免費使用</span>
-    <h1>Christina 的免費學習工具箱<small>英語 · 國語 · 台語 · 數學 · 生活</small></h1>
-    <p class="lead">英文老師兼兩寶媽做的小工具，手機、電腦打開就能用，不用註冊、不用下載。</p>
+    <span class="eyebrow">媽媽好忙。媽媽好嗎？</span>
+    <h1>免費學習工具箱<small>英語 · 國語 · 台語 · 數學 · 生活</small></h1>
+    <p class="lead">英文老師兼兩寶媽 Christina 做的小工具，手機、電腦打開就能用，不用註冊、不用下載。</p>
     <a href="https://portaly.cc/mamahowma/support" target="_blank" rel="noopener noreferrer" class="support-btn">覺得好用嗎？☕ 請杯咖啡鼓勵我</a>
   </header>
 
@@ -121,12 +127,15 @@
       </div>
     </section>
 
-    <div class="note">💡 有建議或發現問題，歡迎寫信或到粉專留言告訴我。</div>
+    <div class="note">💡 有建議或發現問題，歡迎寫信或到粉專「媽媽好忙。媽媽好嗎？」留言告訴我。</div>
 
     <footer class="credits">
+      <div class="brand">媽媽好忙。媽媽好嗎？</div>
       <div class="contact">
         <a href="mailto:mamahowma@gmail.com" aria-label="Email mamahowma"><i class="fa-solid fa-envelope fa-xl fa-fw" aria-hidden="true"></i></a>
         <a href="https://www.facebook.com/mamahowma" target="_blank" rel="noopener noreferrer" aria-label="mamahowma Facebook Page"><i class="fa-brands fa-facebook fa-xl fa-fw" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/@mamahowma" target="_blank" rel="noopener noreferrer" aria-label="mamahowma YouTube"><i class="fa-brands fa-youtube fa-xl fa-fw" aria-hidden="true"></i></a>
+        <a href="https://portaly.cc/mamahowma" target="_blank" rel="noopener noreferrer" aria-label="mamahowma Portaly"><i class="fa-solid fa-link fa-xl fa-fw" aria-hidden="true"></i></a>
         <a href="https://portaly.cc/mamahowma/support" target="_blank" rel="noopener noreferrer" aria-label="Support mamahowma"><i class="fa-solid fa-mug-hot fa-xl fa-fw" aria-hidden="true"></i></a>
       </div>
       <div class="support-cta">
@@ -142,49 +151,51 @@
    新增工具：在對應分類的 items 加一個物件即可。
    分類：id（網址錨點）、e（emoji）、name、a/b（方塊漸層的兩個顏色）
    工具：ic（emoji）、t（中文名）、en（英文名，可省）、d（一句話）、url
+         img（截圖檔名，放在 img/ 裡，800×500）
          alt（第二個連結，可省）例：{ t:"English version", url:"..." }
+   截圖重拍：python D:\工作\工具\audio_helper\shoot_hub.py <repo名>（不帶參數＝全部重拍）
    ============================================================ */
 const CATS = [
   { id:"english", e:"🔡", name:"英語", a:"#7c6fb0", b:"#a79dc4", items:[
-    { ic:"🔍", t:"英文拼字 × 聲音對照", en:"Word Mapper", d:"查單字，看每個字母對到哪個聲音，有美式發音音檔與音標。", url:"https://jinshuanyu.github.io/word-mapper/" },
-    { ic:"📚", t:"國中小各課單字有聲字表", en:"Lesson Words", d:"國小三家版本、國中各課的單字，一鍵開成有聲字表，可印 PDF、可分享。", url:"https://jinshuanyu.github.io/lesson-words/" },
-    { ic:"✏️", t:"英文拼讀測驗", en:"Phonics Quiz", d:"聽聲音選拼法，練 phonics 的互動測驗。", url:"https://jinshuanyu.github.io/phonics-quiz/" },
-    { ic:"📋", t:"Dolch 高頻詞拼讀表", en:"Dolch List", d:"220 個高頻詞依拼讀規則分類，點了就能聽。", url:"https://jinshuanyu.github.io/Dolch-List-by-spelling-patterns/" },
-    { ic:"🕵️", t:"母音偵探", en:"Vowel Detective", d:"聽單字、找出母音，練英文母音聽辨。", url:"https://jinshuanyu.github.io/vowel-detective/" },
-    { ic:"🎯", t:"重音偵探", en:"Stress Detective", d:"聽單字、找出重音在哪個音節。", url:"https://jinshuanyu.github.io/stress-detective/" },
-    { ic:"🗣️", t:"美式英語 IPA 音標指南", en:"IPA Guide", d:"每個音標的發音、例字與音檔，查音標用這個。", url:"https://jinshuanyu.github.io/ipa-guide/" },
-    { ic:"🔊", t:"英語分句朗讀", en:"English Reader", d:"貼上英文句子，一句一句聽發音，練朗讀。", url:"https://jinshuanyu.github.io/english-reader/" },
-    { ic:"🌱", t:"句子擴寫", en:"Grow a Sentence", d:"擲骰子加細節，把短句一步步長成長句。", url:"https://jinshuanyu.github.io/grow-a-sentence/" },
-    { ic:"🪜", t:"單字接龍", en:"Word Ladder", d:"每次只改一個字母，從起點字走到目標字。", url:"https://jinshuanyu.github.io/word-ladder/" },
-    { ic:"🔟", t:"英文數字 1–10 拼字 × 聲音", en:"One to Ten", d:"one 到 ten 的拼字聲音對照表，入門用。", url:"https://jinshuanyu.github.io/one-to-ten-word-mapper/" },
-    { ic:"📺", t:"英語教育影片推薦", en:"Playlists for Kids", d:"科普、社會、語文、幼幼，兩寶看過的 YouTube 與串流節目片單。", url:"https://jinshuanyu.github.io/englishplaylistsforkids/" },
-    { ic:"🎧", t:"英語聽力微習慣承諾卡", d:"五題找到你的起跑點，做一張每天聽英文的承諾卡。", url:"https://jinshuanyu.github.io/daily-english-listening-habit/" }
+    { ic:"🔍", t:"Word Mapper（國中 2000 單）", en:"英文拼字 × 聲音對照", d:"4 步驟拆解英文字的拼字與發音對應，支援 IPA 和 Phonics 模式切換，可搜尋、收藏、列印。", url:"https://jinshuanyu.github.io/word-mapper/", img:"word-mapper" },
+    { ic:"📚", t:"國中小各課單字有聲字表", en:"Lesson Words", d:"國小康軒／翰林／何嘉仁、國中各課單字，一鍵開成有聲字表，可印 PDF、可分享連結。", url:"https://jinshuanyu.github.io/lesson-words/", img:"lesson-words" },
+    { ic:"✏️", t:"英文拼讀測驗", en:"Phonics Quiz", d:"聽聲音選拼法的互動測驗，一關一關練 phonics。", url:"https://jinshuanyu.github.io/phonics-quiz/", img:"phonics-quiz" },
+    { ic:"📋", t:"高頻詞拼讀詞典", en:"Dolch List", d:"依拼字規律分組的常見字有聲詞典，有效練習瞬認與拼讀。", url:"https://jinshuanyu.github.io/Dolch-List-by-spelling-patterns/", img:"Dolch-List-by-spelling-patterns" },
+    { ic:"🕵️", t:"母音偵探", en:"Vowel Detective", d:"破解最容易混淆的幾組母音，提升聽力及發音準確度。", url:"https://jinshuanyu.github.io/vowel-detective/", img:"vowel-detective" },
+    { ic:"🎯", t:"重音偵探", en:"Stress Detective", d:"聽單字、找出重音在哪個音節，練多音節字的節奏。", url:"https://jinshuanyu.github.io/stress-detective/", img:"stress-detective" },
+    { ic:"🗣️", t:"美式英語 IPA 音標指南", en:"IPA Guide", d:"每個音標的發音、例字與音檔，看不懂音標時查這裡。", url:"https://jinshuanyu.github.io/ipa-guide/", img:"ipa-guide" },
+    { ic:"🔊", t:"英語分句朗讀", en:"English Reader", d:"貼上英文句子，一句一句聽發音、跟著讀，練朗讀用。", url:"https://jinshuanyu.github.io/english-reader/", img:"english-reader" },
+    { ic:"🌱", t:"Grow a Sentence", en:"句子擴寫", d:"從主詞+動詞開始，用擲骰子或自訂方式加上受詞、副詞、地點、時間，一步步長出完整句子。", url:"https://jinshuanyu.github.io/grow-a-sentence/", img:"grow-a-sentence" },
+    { ic:"🪜", t:"單字接龍", en:"Word Ladder", d:"每次只改一個字母，從起點字走到目標字，練拼字與字母音。", url:"https://jinshuanyu.github.io/word-ladder/", img:"word-ladder" },
+    { ic:"🔟", t:"英文數字 1–10 拼字 × 聲音", en:"One to Ten", d:"one 到 ten 的拼字聲音對照表，Word Mapper 的入門版。", url:"https://jinshuanyu.github.io/one-to-ten-word-mapper/", img:"one-to-ten-word-mapper" },
+    { ic:"📺", t:"兒童英語影片", en:"Playlists for Kids", d:"精選 50+ 部免費英語教育節目，依主題和年齡分類，涵蓋科學、文學、幼幼到中高年級。", url:"https://jinshuanyu.github.io/englishplaylistsforkids/", img:"englishplaylistsforkids" },
+    { ic:"🎧", t:"英語聽力微習慣承諾卡", d:"五題找到你的起跑點，做一張每天聽英文的承諾卡，可存成 PDF。", url:"https://jinshuanyu.github.io/daily-english-listening-habit/", img:"daily-english-listening-habit" }
   ]},
   { id:"chinese", e:"📖", name:"國語", a:"#d9586b", b:"#f0919c", items:[
-    { ic:"🔗", t:"生字 × 筆順 × 成語", d:"選學期、年級、版本、課別，查每課生字的筆順與成語。", url:"https://jinshuanyu.github.io/chinese-idioms-by-lesson/" },
-    { ic:"🐰", t:"跟著小兔學國字 筆順練習", d:"中文分級筆順練習入口。", url:"https://jinshuanyu.github.io/chinese-beginner-stroke-practice/" },
-    { ic:"🌸", t:"花瓣識字", d:"選注音、找部件，認識同一個部件的文字家族，可列印。", url:"https://jinshuanyu.github.io/chinese-character-blossom-finder/" },
-    { ic:"ㄅ", t:"注音小達人", d:"容易混淆的注音分關卡練習，聽發音選答案。", url:"https://jinshuanyu.github.io/bopomofo-game/" },
-    { ic:"🧮", t:"量詞配對小遊戲", d:"一隻、一條、一張……計時配對練量詞。", url:"https://jinshuanyu.github.io/chinese-quantifiers/" },
-    { ic:"📝", t:"成語學習工具", d:"自己選成語，學習、測驗、生成學習單。", url:"https://jinshuanyu.github.io/chinese-idioms/" },
-    { ic:"📚", t:"臺灣本土兒少好書推薦", d:"從各大推薦書單精選的臺灣本土創作讀物，可依年齡篩選。", url:"https://jinshuanyu.github.io/tw-local-books/" }
+    { ic:"🔗", t:"生字 × 筆順 × 成語", d:"國小各年級版本生字，結合筆順練習和延伸成語查詢。", url:"https://jinshuanyu.github.io/chinese-idioms-by-lesson/", img:"chinese-idioms-by-lesson" },
+    { ic:"🐰", t:"跟著小兔學國字 筆順練習", d:"配合《跟著小兔學國字》的分級筆順練習入口，一課一課練。", url:"https://jinshuanyu.github.io/chinese-beginner-stroke-practice/", img:"chinese-beginner-stroke-practice" },
+    { ic:"🌸", t:"花瓣識字", d:"用部件（聲符）展開形聲字家族，點字即可查教育部辭典。掌握形聲字邏輯，破解改錯題，適合中高年級。", url:"https://jinshuanyu.github.io/chinese-character-blossom-finder/", img:"chinese-character-blossom-finder" },
+    { ic:"ㄅ", t:"注音小達人", d:"整理 4 種容易錯的注音題型，聽語音選正確拼音。低年級適用。", url:"https://jinshuanyu.github.io/bopomofo-game/", img:"bopomofo-game" },
+    { ic:"🧮", t:"量詞配對", d:"包含 48 個常用量詞，有互動、有隨機性，讓孩子更有動力繼續挑戰。", url:"https://jinshuanyu.github.io/chinese-quantifiers/", img:"chinese-quantifiers" },
+    { ic:"📝", t:"成語學習工具", d:"搜尋成語、查語義例句、做線上填空測驗，還能生成 A4 學習單 PDF。資料來自教育部《成語典》。", url:"https://jinshuanyu.github.io/chinese-idioms/", img:"chinese-idioms" },
+    { ic:"📚", t:"本土兒少好書", d:"整合 8 大推薦書單，依年齡篩選本土創作好書，提供購買或借閱查詢連結。", url:"https://jinshuanyu.github.io/tw-local-books/", img:"tw-local-books" }
   ]},
   { id:"taigi", e:"🗣️", name:"台語", a:"#1f9e8c", b:"#5fc7b4", items:[
-    { ic:"👂", t:"台語入門聽力練習", d:"聽音選調、聽寫漢字、聽寫台羅，用教育部辭典音檔。", url:"https://jinshuanyu.github.io/taigi-listening/" },
-    { ic:"💬", t:"咱來學臺灣台語・讀語句", d:"從簡單語句開始讀台語。", url:"https://jinshuanyu.github.io/taigi-sentences/" }
+    { ic:"👂", t:"台語入門聽力練習", d:"聽音選調、聽寫漢字、聽寫台羅三種題型，用教育部辭典的音檔，可只練答錯過的。", url:"https://jinshuanyu.github.io/taigi-listening/", img:"taigi-listening" },
+    { ic:"💬", t:"咱來學臺灣台語・讀語句", d:"分冊分課的台語語句，漢字、台羅、華語解釋對照，從簡單句子開始讀。", url:"https://jinshuanyu.github.io/taigi-sentences/", img:"taigi-sentences" }
   ]},
   { id:"math", e:"🔢", name:"數學", a:"#2f7fd1", b:"#73b1ef", items:[
-    { ic:"✖️", t:"十十乘法表 & 乘法大挑戰", d:"看乘法表、玩乘法挑戰。", url:"https://jinshuanyu.github.io/times-table/" },
-    { ic:"🎄", t:"聖誕樹乘法遊戲", d:"找倍數點亮聖誕樹。", url:"https://jinshuanyu.github.io/christmas-tree-multiples/" },
-    { ic:"🚀", t:"太空漫遊", en:"Spacewalk", d:"2–4 人擲骰子加法桌遊，先衝到 100 的贏。", url:"https://jinshuanyu.github.io/spacewalk/" },
-    { ic:"➕", t:"加法表 & 加減法練習", d:"加法表與基礎加減練習。", url:"https://jinshuanyu.github.io/add-and-subtract/" },
-    { ic:"➖", t:"退位減法練習", d:"18 以內的退位減法練習。", url:"https://jinshuanyu.github.io/subtraction-borrowing/" }
+    { ic:"✖️", t:"乘法練習遊戲", d:"十十乘法表和單一／綜合挑戰模式。", url:"https://jinshuanyu.github.io/times-table/", img:"times-table" },
+    { ic:"🎄", t:"聖誕樹乘法練習", d:"把正確答案拖到樹上，為聖誕樹點燈裝飾！", url:"https://jinshuanyu.github.io/christmas-tree-multiples/", img:"christmas-tree-multiples" },
+    { ic:"🚀", t:"太空漫步（加法）", en:"Spacewalk", d:"遊戲情境的加法挑戰，計算能力 + 運氣。2–4 人輪流擲骰子，先到 100 的贏。", url:"https://jinshuanyu.github.io/spacewalk/", img:"spacewalk" },
+    { ic:"➕", t:"加減法練習", d:"從 18 以內加減法，到兩位數加減。", url:"https://jinshuanyu.github.io/add-and-subtract/", img:"add-and-subtract" },
+    { ic:"➖", t:"減法借位", d:"專練借位觀念與步驟，減少計算錯誤。", url:"https://jinshuanyu.github.io/subtraction-borrowing/", img:"subtraction-borrowing" }
   ]},
   { id:"life", e:"🌿", name:"生活", a:"#e0862e", b:"#f5b461", items:[
-    { ic:"🗺️", t:"環遊世界 地理消消樂", en:"World Travel", d:"連線消除地標，答對地理問答加步數。", url:"https://jinshuanyu.github.io/geo-crush-chinese/", alt:{ t:"English version", url:"https://jinshuanyu.github.io/geo-crush/" } },
-    { ic:"🍬", t:"多巴胺菜單", en:"Dopamine Menu", d:"為 ADHD 大腦設計，無聊或低落時打開來點一道開心的事。", url:"https://jinshuanyu.github.io/dopamine-menu/" },
-    { ic:"🍵", t:"專注計時", en:"Steep", d:"25 分鐘專注、5 分鐘休息的簡單計時器。", url:"https://jinshuanyu.github.io/steep/" },
-    { ic:"🥚", t:"蛋白質吃夠了嗎？", d:"幫全家搭配優質蛋白質餐盤，自動算採買清單。", url:"https://jinshuanyu.github.io/protein-tracker/" }
+    { ic:"🗺️", t:"環遊世界 地理消消樂", en:"World Travel", d:"交換地標、三個連線消除，每隔幾次出現地理問答，答對加步數、答錯扣步數。", url:"https://jinshuanyu.github.io/geo-crush-chinese/", img:"geo-crush-chinese", alt:{ t:"English version", url:"https://jinshuanyu.github.io/geo-crush/" } },
+    { ic:"🍬", t:"多巴胺菜單", en:"Dopamine Menu", d:"無聊或情緒低落時打開，從菜單裡點一道讓你開心的事。", url:"https://jinshuanyu.github.io/dopamine-menu/", img:"dopamine-menu" },
+    { ic:"🍵", t:"Steep 專注計時", d:"25 分鐘專注＋5 分鐘休息的番茄鐘計時器，切換工作與休息模式，讓大腦有節奏地深度工作。", url:"https://jinshuanyu.github.io/steep/", img:"steep" },
+    { ic:"🥚", t:"蛋白質夠了嗎？", d:"輸入家人的體重與活動量，計算每日蛋白質目標，點選食物建立今日餐盤，還能生成家庭採買清單。", url:"https://jinshuanyu.github.io/protein-tracker/", img:"protein-tracker" }
   ]}
 ];
 
@@ -208,8 +219,8 @@ function renderCat(c){
   $("crumb").innerHTML = `<span class="e" style="${style(c)}">${c.e}</span>${esc(c.name)}<small>${c.items.length} 個工具</small>`;
   $("cards").innerHTML = c.items.map(it => `
     <a class="card" href="${it.url}" style="${style(c)}">
-      <span class="ic">${it.ic}</span>
-      <span>
+      <span class="shot"><img loading="lazy" src="img/${it.img}.jpg" alt="${esc(it.t)} 畫面" width="800" height="500"><span class="ic">${it.ic}</span></span>
+      <span class="body">
         <span class="t">${esc(it.t)}${it.en ? `<small>${esc(it.en)}</small>` : ""}</span>
         <span class="d">${esc(it.d)}</span>
         ${it.alt ? `<span class="alt" data-url="${it.alt.url}">${esc(it.alt.t)} ↗</span>` : ""}
