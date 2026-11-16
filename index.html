@@ -32,7 +32,7 @@
   .hero h1{font-size:2.1rem;font-weight:900;line-height:1.3;margin:0 0 .4rem;letter-spacing:.02em}
   .hero h1 small{display:block;font-size:1rem;font-weight:500;opacity:.92;margin-top:.3rem;letter-spacing:.08em}
   .hero .lead{color:rgba(255,255,255,.9);margin:.8rem auto 0;font-size:.98rem;max-width:34em}
-  .hero .support-btn{margin-top:1.2rem}
+  .hero .support-btn{margin-top:1.2rem;font-size:1.1rem}
   .hero-back{position:absolute;left:1rem;top:.9rem;color:rgba(255,255,255,.9);font-size:.85rem;font-weight:700;text-decoration:none;background:rgba(0,0,0,.12);padding:.2rem .7rem;border-radius:999px;border:0;cursor:pointer;font-family:inherit}
   .hero-back:hover{background:rgba(0,0,0,.22)}
 
@@ -64,7 +64,7 @@
   .card .body{padding:1.15rem 1rem 1rem}
   .card .t{font-weight:900;font-size:1.05rem;color:#0f172a;line-height:1.35}
   .card .t small{display:block;font-family:inherit;font-size:.78rem;font-weight:700;color:var(--c-muted);margin-top:.1rem}
-  .card .d{font-size:.86rem;color:#475569;margin-top:.35rem;line-height:1.55}
+  .card .d{font-size:.96rem;color:#475569;margin-top:.35rem;line-height:1.55}
   .card .alt{display:inline-block;margin-top:.45rem;font-size:.78rem;font-weight:700;color:var(--a);background:color-mix(in srgb,var(--a) 12%,#fff);border-radius:999px;padding:.05rem .6rem}
   .others{margin-top:2rem}
   .others h3{font-size:.9rem;font-weight:700;color:var(--c-muted);margin:0 0 .6rem;letter-spacing:.06em}
@@ -97,6 +97,7 @@
     .cards{grid-template-columns:1fr}
     .crumb{font-size:1.3rem}
     .support-btn{font-size:.9rem;font-weight:500;padding:.45rem 1rem}
+    .hero .support-btn{font-size:1rem}
   }
 </style>
 </head>
@@ -105,9 +106,9 @@
   <header class="hero">
     <button class="hero-back" id="heroBack" type="button" hidden>← 回首頁</button>
     <span class="eyebrow">媽媽好忙。媽媽好嗎？</span>
-    <h1>免費學習工具箱<small>中文 · 台語 · 外語 · 數學 · 生活</small></h1>
-    <p class="lead">共好分享，手機、電腦打開就能用，免註冊、免下載</p>
-    <a href="https://portaly.cc/mamahowma/support" target="_blank" rel="noopener noreferrer" class="support-btn">覺得好用嗎？☕ 請杯咖啡鼓勵我</a>
+    <h1>免費學習工具箱</h1>
+    <p class="lead">共好分享，免註冊、免下載，打開就能用</p>
+    <a href="https://portaly.cc/mamahowma/support" target="_blank" rel="noopener noreferrer" class="support-btn">好用嗎？☕ 買杯咖啡鼓勵我</a>
   </header>
 
   <div class="inner">
@@ -170,7 +171,7 @@ const CATS = [
     // { ic:"💬", t:"咱來學臺灣台語・讀語句", d:"分冊分課的台語語句，漢字、台羅、華語解釋對照，從簡單句子開始讀。", url:"https://jinshuanyu.github.io/taigi-sentences/", img:"taigi-sentences" }
   ]},
   { id:"languages", e:"🔡", name:"外語", a:"#7c6fb0", b:"#a79dc4", items:[
-    { ic:"🌍", t:"First Words 多語言學習卡", en:"First Words", d:"英、日、西、法、德、義等語言的字母發音、基本單字、用語和小對話，點卡片聽發音，也能切換測驗模式翻牌練習。", url:"https://jinshuanyu.github.io/first-words/", img:"first-words" },
+    { ic:"🌍", t:"First Words 多語言學習卡", en:"First Words", d:"英、日、台、西、法、德、義七種語言的字母發音、單字和小對話，點卡片就能聽。", url:"https://jinshuanyu.github.io/first-words/", img:"first-words" },
     { ic:"🔍", t:"Word Mapper（國中 2000 單）", en:"英文拼字 × 聲音對照", d:"4 步驟拆解英文字的拼字與發音對應，支援 IPA 和 Phonics 模式切換，可搜尋、收藏、列印。", url:"https://jinshuanyu.github.io/word-mapper/", img:"word-mapper" },
     { ic:"📚", t:"國中小各課單字有聲字表", en:"Lesson Words", d:"國小康軒／翰林／何嘉仁、國中各課單字，一鍵開成有聲字表，可印 PDF、可分享連結。", url:"https://jinshuanyu.github.io/lesson-words/", img:"lesson-words" },
     { ic:"✏️", t:"英文拼讀測驗", en:"Phonics Quiz", d:"聽聲音選拼法的互動測驗，一關一關練 phonics，搭配 Word Mapper 複習。", url:"https://jinshuanyu.github.io/phonics-quiz/", img:"phonics-quiz" },
