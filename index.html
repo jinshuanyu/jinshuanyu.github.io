@@ -158,32 +158,32 @@
    ============================================================ */
 const CATS = [
   { id:"chinese", e:"📖", name:"中文", a:"#d9586b", b:"#f0919c", items:[
-    { ic:"🔗", t:"生字 × 筆順 × 成語", d:"國小各年級版本生字，結合筆順練習和延伸成語查詢。", url:"https://jinshuanyu.github.io/chinese-idioms-by-lesson/", img:"chinese-idioms-by-lesson" },
-    { ic:"🌸", t:"花瓣識字", d:"用部件（聲符）展開形聲字家族，點字即可查教育部辭典。掌握形聲字邏輯，破解改錯題，適合中高年級。", url:"https://jinshuanyu.github.io/chinese-character-blossom-finder/", img:"chinese-character-blossom-finder" },
+    { ic:"🔗", t:"生字 × 筆順 × 成語", d:"國小各版本各課生字，結合筆順練習和延伸成語查詢。", url:"https://jinshuanyu.github.io/chinese-idioms-by-lesson/", img:"chinese-idioms-by-lesson" },
+    { ic:"🌸", t:"花瓣識字", d:"用部件（聲符）展開形聲字家族，破解改錯題。連結教育部辭典，適合中高年級。", url:"https://jinshuanyu.github.io/chinese-character-blossom-finder/", img:"chinese-character-blossom-finder" },
     { ic:"ㄅ", t:"注音小達人", d:"整理 4 種容易錯的注音題型，聽語音選正確拼音。低年級適用。", url:"https://jinshuanyu.github.io/bopomofo-game/", img:"bopomofo-game" },
-    { ic:"🧮", t:"量詞配對", d:"包含 48 個常用量詞，有互動、有隨機性，讓孩子更有動力繼續挑戰。", url:"https://jinshuanyu.github.io/chinese-quantifiers/", img:"chinese-quantifiers" },
-    { ic:"📝", t:"成語學習工具", d:"搜尋成語、查語義例句、做線上填空測驗，還能生成 A4 學習單 PDF。資料來自教育部《成語典》。", url:"https://jinshuanyu.github.io/chinese-idioms/", img:"chinese-idioms" },
-    { ic:"📚", t:"本土兒少好書", d:"整合 8 大推薦書單，依年齡篩選本土創作好書，提供購買或借閱查詢連結。", url:"https://jinshuanyu.github.io/tw-local-books/", img:"tw-local-books" }
+    { ic:"🧮", t:"量詞配對", d:"包含 48 個常用量詞，互動遊戲，讓孩子更有動力挑戰。", url:"https://jinshuanyu.github.io/chinese-quantifiers/", img:"chinese-quantifiers" },
+    { ic:"📝", t:"成語學習工具", d:"查詢成語語義、例句，可線上測驗，還能生成學習單。資料來自教育部《成語典》。", url:"https://jinshuanyu.github.io/chinese-idioms/", img:"chinese-idioms" },
+    { ic:"📚", t:"本土兒少好書", d:"整合各大推薦書單，依年齡篩選本土創作好書，提供購買或借閱查詢連結。", url:"https://jinshuanyu.github.io/tw-local-books/", img:"tw-local-books" }
   ]},
   { id:"taigi", e:"🗣️", name:"台語", a:"#1f9e8c", b:"#5fc7b4", items:[
-    { ic:"👂", t:"台語入門聽力練習", d:"聽音選調、聽寫漢字、聽寫台羅三種題型，用教育部辭典的音檔，可只練答錯過的。", url:"https://jinshuanyu.github.io/taigi-listening/", img:"taigi-listening" },
+    { ic:"👂", t:"台語入門聽力練習", d:"聽音選調、聽寫漢字、聽寫台羅三種題型，連結教育部辭典音檔，可重練錯題。", url:"https://jinshuanyu.github.io/taigi-listening/", img:"taigi-listening" },
     // 教育部回覆授權尚未確立，請先暫時下架（2026-11）；授權確定後拿掉這行開頭的 // 就能恢復
     // { ic:"💬", t:"咱來學臺灣台語・讀語句", d:"分冊分課的台語語句，漢字、台羅、華語解釋對照，從簡單句子開始讀。", url:"https://jinshuanyu.github.io/taigi-sentences/", img:"taigi-sentences" }
   ]},
   { id:"languages", e:"🔡", name:"外語", a:"#7c6fb0", b:"#a79dc4", items:[
-    { ic:"🌍", t:"First Words 多語言學習卡", en:"First Words", d:"英、日、台、西、法、德、義七種語言的字母發音、單字和小對話，點卡片就能聽。", url:"https://jinshuanyu.github.io/first-words/", img:"first-words" },
-    { ic:"🔍", t:"Word Mapper（國中 2000 單）", en:"英文拼字 × 聲音對照", d:"4 步驟拆解英文字的拼字與發音對應，支援 IPA 和 Phonics 模式切換，可搜尋、收藏、列印。", url:"https://jinshuanyu.github.io/word-mapper/", img:"word-mapper" },
-    { ic:"📚", t:"國中小各課單字有聲字表", en:"Lesson Words", d:"國小康軒／翰林／何嘉仁、國中各課單字，一鍵開成有聲字表，可印 PDF、可分享連結。", url:"https://jinshuanyu.github.io/lesson-words/", img:"lesson-words" },
-    { ic:"✏️", t:"英文拼讀測驗", en:"Phonics Quiz", d:"聽聲音選拼法的互動測驗，一關一關練 phonics，搭配 Word Mapper 複習。", url:"https://jinshuanyu.github.io/phonics-quiz/", img:"phonics-quiz" },
+    { ic:"🌍", t:"First Words 多語言學習卡", d:"英、日、台、西、法、德、義七種語言的字母發音、單字和小對話，點卡片就能聽。", url:"https://jinshuanyu.github.io/first-words/", img:"first-words" },
+    { ic:"🔍", t:"Word Mapper（國中 2000 單）", en:"英文拼字 × 聲音對照", d:"分解英文單字的拼字與發音對應，支援 IPA 和 Phonics 模式切換，可自編字表。", url:"https://jinshuanyu.github.io/word-mapper/", img:"word-mapper" },
+    { ic:"📚", t:"國中小各課單字有聲字表", en:"Lesson Words", d:"各版本分課有聲字表，科學記憶單字拼寫。附主題影片連結。", url:"https://jinshuanyu.github.io/lesson-words/", img:"lesson-words" },
+    { ic:"✏️", t:"英文拼讀測驗", en:"Phonics Quiz", d:"字母拼讀法的教學及互動測驗，按難度循序漸進。", url:"https://jinshuanyu.github.io/phonics-quiz/", img:"phonics-quiz" },
     { ic:"📋", t:"高頻詞拼讀詞典", en:"Dolch List", d:"依拼字規律分組的常見字有聲詞典，有效練習瞬認與拼讀。", url:"https://jinshuanyu.github.io/Dolch-List-by-spelling-patterns/", img:"Dolch-List-by-spelling-patterns" },
     { ic:"🕵️", t:"母音偵探", en:"Vowel Detective", d:"破解最容易混淆的幾組母音，提升聽力及發音準確度。", url:"https://jinshuanyu.github.io/vowel-detective/", img:"vowel-detective" },
-    { ic:"🎯", t:"重音偵探", en:"Stress Detective", d:"聽單字、找出重音在哪個音節，練多音節字的節奏。", url:"https://jinshuanyu.github.io/stress-detective/", img:"stress-detective" },
-    { ic:"🗣️", t:"美式英語 IPA 音標指南", en:"IPA Guide", d:"每個音標的發音、例字與音檔，看不懂音標時查這裡。", url:"https://jinshuanyu.github.io/ipa-guide/", img:"ipa-guide" },
-    { ic:"🔊", t:"英語分句朗讀", en:"English Reader", d:"貼上英文句子，一句一句聽發音、跟著讀，練朗讀用。", url:"https://jinshuanyu.github.io/english-reader/", img:"english-reader" },
+    { ic:"🎯", t:"重音偵探", en:"Stress Detective", d:"聽單字、找出重音在哪個音節，按難度升級闖關。", url:"https://jinshuanyu.github.io/stress-detective/", img:"stress-detective" },
+    { ic:"🗣️", t:"美式英語 IPA 音標指南", d:"每個音標的發音、例字與音檔，看不懂音標時查這裡。", url:"https://jinshuanyu.github.io/ipa-guide/", img:"ipa-guide" },
+    { ic:"🔊", t:"英語分句朗讀", en:"English Reader", d:"貼上英文句子，一句一句聽發音、跟讀，練朗讀的實用工具。", url:"https://jinshuanyu.github.io/english-reader/", img:"english-reader" },
     { ic:"🌱", t:"Grow a Sentence", en:"句子擴寫", d:"從主詞+動詞開始，用擲骰子或自訂方式加上受詞、副詞、地點、時間，一步步長出完整句子。", url:"https://jinshuanyu.github.io/grow-a-sentence/", img:"grow-a-sentence" },
     { ic:"🪜", t:"單字接龍", en:"Word Ladder", d:"每次只改一個字母，從起點字走到目標字，練拼字與字母音。", url:"https://jinshuanyu.github.io/word-ladder/", img:"word-ladder" },
     { ic:"📺", t:"兒童英語影片", en:"Playlists for Kids", d:"精選 50+ 部免費英語教育節目，依主題和年齡分類，涵蓋科學、文學、幼幼到中高年級。", url:"https://jinshuanyu.github.io/englishplaylistsforkids/", img:"englishplaylistsforkids" },
-    { ic:"🎧", t:"英語聽力微習慣承諾卡", d:"五題找到你的起跑點，做一張每天聽英文的承諾卡，可存成 PDF。", url:"https://jinshuanyu.github.io/daily-english-listening-habit/", img:"daily-english-listening-habit" }
+    { ic:"🎧", t:"英語聽力微習慣承諾卡", d:"5 題找到你的起跑點，做一張每天聽英文的承諾卡，可存成 PDF。", url:"https://jinshuanyu.github.io/daily-english-listening-habit/", img:"daily-english-listening-habit" }
   ]},
   { id:"math", e:"🔢", name:"數學", a:"#2f7fd1", b:"#73b1ef", items:[
     { ic:"✖️", t:"乘法練習遊戲", d:"十十乘法表和單一／綜合挑戰模式。", url:"https://jinshuanyu.github.io/times-table/", img:"times-table" },
@@ -193,10 +193,10 @@ const CATS = [
     { ic:"➖", t:"減法借位", d:"專練借位觀念與步驟，減少計算錯誤。", url:"https://jinshuanyu.github.io/subtraction-borrowing/", img:"subtraction-borrowing" }
   ]},
   { id:"life", e:"🌿", name:"生活", a:"#e0862e", b:"#f5b461", items:[
-    { ic:"🗺️", t:"環遊世界 地理消消樂", en:"World Travel", d:"交換地標、三個連線消除，每隔幾次出現地理問答，答對加步數、答錯扣步數。", url:"https://jinshuanyu.github.io/geo-crush-chinese/", img:"geo-crush-chinese", alt:{ t:"English version", url:"https://jinshuanyu.github.io/geo-crush/" } },
+    { ic:"🗺️", t:"環遊世界 地理消消樂", en:"World Travel", d:"地理知識問答，結合消消樂，寓教於樂。", url:"https://jinshuanyu.github.io/geo-crush-chinese/", img:"geo-crush-chinese", alt:{ t:"English version", url:"https://jinshuanyu.github.io/geo-crush/" } },
     { ic:"🍬", t:"多巴胺菜單", en:"Dopamine Menu", d:"無聊或情緒低落時打開，從菜單裡點一道讓你開心的事。", url:"https://jinshuanyu.github.io/dopamine-menu/", img:"dopamine-menu" },
-    { ic:"🍵", t:"Steep 專注計時", d:"25 分鐘專注＋5 分鐘休息的番茄鐘計時器，切換工作與休息模式，讓大腦有節奏地深度工作。", url:"https://jinshuanyu.github.io/steep/", img:"steep" },
-    { ic:"🥚", t:"蛋白質夠了嗎？", d:"輸入家人的體重與活動量，計算每日蛋白質目標，點選食物建立今日餐盤，還能生成家庭採買清單。", url:"https://jinshuanyu.github.io/protein-tracker/", img:"protein-tracker" }
+    { ic:"🍵", t:"Steep 專注計時", d:"25 分鐘專注＋5 分鐘休息的番茄鐘計時器，專注時等待花開，休息時喝杯茶。", url:"https://jinshuanyu.github.io/steep/", img:"steep" },
+    { ic:"🥚", t:"蛋白質夠了嗎？", d:"輸入家人的體重與活動量，計算每日蛋白質目標，還能生成家庭採買清單。", url:"https://jinshuanyu.github.io/protein-tracker/", img:"protein-tracker" }
   ]}
 ];
 
